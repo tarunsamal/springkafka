@@ -41,12 +41,12 @@ public class KafkaConsumerConfig {
 
     //Consumer Group
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String,Object> firstKafkaListenerFactory()
+    public ConcurrentKafkaListenerContainerFactory<String,Object> firstKafkaListenerContainerFactory()
     {
         ConcurrentKafkaListenerContainerFactory<String,Object> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory("consumerGroup1"));
-        factory.setConcurrency(3);
+        factory.setConcurrency(1);
         factory.setAutoStartup(true);
 
         return factory;
