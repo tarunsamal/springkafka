@@ -11,3 +11,5 @@ log.dirs=/tmp/kafka2-logs
 
 Start broker 1 : bin/kafka-server-start.sh config/server.properties
 Start broker 2 : bin/kafka-server-start.sh config/server2.properties
+
+Check consumer groups : bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group consumerGroup1
